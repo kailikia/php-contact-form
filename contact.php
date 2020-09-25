@@ -7,9 +7,9 @@ if (isset($_POST['name'], $_POST['email'], $_POST['message'])){
 	$message = $_POST['message'];
 		
 	//recipient - replace your email here
-	$to = 'info@hamrolenterprise.co.ke';	
+	$to = 'your-email';	
 	//sender - from the form
-	$from = 'Hamrol Enterprise' . ' <' . $email . '>';
+	$from = 'Your Company name' . ' <' . $email . '>';
 	
 	//subject and the html message
 	$subject = 'Message from ' . $name;	
@@ -23,8 +23,8 @@ if (isset($_POST['name'], $_POST['email'], $_POST['message'])){
 	if ( 1 == 1){
 	
 		$client_to = $email;
-		$client_from = 'Hamrol Enterprise ' . ' <' . $to . '>';
-		$client_subject = 'Hamrol Enterprise';
+		$client_from = 'Your company name ' . ' <' . $to . '>';
+		$client_subject = 'Your company name';
 		$client_msg =  '<center><h4 class="title"><font color="purple">Thank you <font color="red">'.$name.'</font>! We have received your Message. We will contact you shortly. </center></h4></font>';
 		
 		sendmail($client_to, $client_subject, $client_msg, $client_from);
